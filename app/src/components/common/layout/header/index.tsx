@@ -15,6 +15,7 @@ import {
   ModalConnectWalletWrapper,
   ModalDepositWithdrawWrapper,
   ModalLockYoTokens,
+  ModalVoteWrapper,
   ModalYourConnectionWrapper,
 } from '../../../modal'
 import { Dropdown, DropdownItemProps, DropdownPosition } from '../../form/dropdown'
@@ -373,6 +374,7 @@ const HeaderContainer: React.FC = (props: any) => {
           onClose={() => setModalLockTokensState(false)}
           setIsModalLockTokensOpen={setModalLockTokensState}
         />
+        <ModalVoteWrapper context={context} isOpen={true} onClose={() => setModalLockTokensState(false)} yes />
         <ModalYourConnectionWrapper
           arrayOfClaimableBalances={arrayOfClaimableTokenBalances}
           changeWallet={() => {
